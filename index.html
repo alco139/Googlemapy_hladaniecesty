@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dynamicka tabulka</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sd-10 mt-5 borderDiv">
+        <h1>Nastav hodnoty na vytvorenie tabuľky</h1>
+        <div class="form-group m-1" id="xDiv">
+          <h4>X value:</h4>
+          <input type="number" class="form-control" name="x" id="x" min="1" max="9">
+          <p id="xHelp"></p>
+        </div>
+        <br>
+        <div class="form-group m-1 mb-4 " id="yDiv">
+          <h4>Y value:</h4>
+          <input type="number" class="form-control" name="y" id="y" min="1" max="9">
+          <p id="yHelp"></p>
+        </div>  
+        <button type="button" onclick="createTable()" class="btn btn-block btn-light ">Vytvor tabuľku</button>
+        
+        <div class="dialog-back" onclick="closeModel()" id="dialogWindow">
+          <div class="dialog">
+            <div class="dialog-table" id="dialogBody">
+
+            </div>
+            <div class="dialog-footer">
+              <button type="button" onclick="closeModel()" class="btn btn-block btn-dark ">Zatvoriť</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
